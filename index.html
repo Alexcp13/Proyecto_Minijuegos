@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minijuegos</title>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#section1">3 en Raya</a></li>
+      </ul>
+      <ul>
+        <li><a href="#section2">Ppt</a></li>
+      </ul>
+      <ul>
+        <li><a href="#section3">Ahorcado</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="section1">
+    <div class="container">
+      <h1>3 en Raya</h1>
+      <div class="wins-container">
+        <div class="x-wins">Victorias de X: 0</div>
+        <div class="o-wins">Victorias de O: 0</div>
+      </div>
+
+      <div class="game-container">
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+      </div>
+
+      <div><button class="player-choice" id="start-X">Comenzar con X</button>
+        <button class="player-choice" id="start-O">Comenzar con O</button>
+      </div>
+      <h2 class="game-notification"></h2>
+      <button class="game-restart">Restart</button>
+
+
+    </div>
+
+
+  </section>
+
+  <section id="section2">
+
+    <div class="container2">
+      <h1>¿Piedra, papel o tijera?</h1>
+      <div class="marker">
+        <p class="name player-name">Jugador</p>
+        <p class="name computer-name">Máquina</p>
+        <p class="points">
+          <span id="user-points">0</span>
+          <span>-</span>
+          <span id="computer-points">0</span>
+        </p>
+      </div>
+      <div class="choose-your-weapon" id="choose-your-weapon">
+
+        <div class="weapons">
+          <button class="weapon" id="roca🗿">🗿</button>
+          <button class="weapon" id="papel📋">📋</button>
+          <button class="weapon" id="tijeras✂️">✂️</button>
+        </div>
+      </div>
+      <div class="message disabled" id="message">
+        <p>
+          Has usado <span class="choice" id="user-choice">papel📋</span><br>
+          y la máquina <span class="choice" id="computer-choice">roca🗿</span>
+        </p>
+        <p id="win-point">Has ganado! 🔥</p>
+      </div>
+
+      <button class="btn disabled" id="restart">Restart </button>
+    </div>
+
+  </section>
+  <section id="section3">
+    <div class="container3">
+      <h1>Ahorcado</h1>
+
+      <div class="col">
+        <div class="ahorcado">
+          <img class="ahorcadoImage" src="./assets/b.png" alt="">
+
+        </div>
+      </div>
+      <div class="col">
+
+        <p class='hiddenWord'></p>
+        <p>Introduzca una letra:</p>
+        <input type="text">
+        <button class="verificar">Verificar letra</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script type="module" src="./index.js"></script>
+</body>
+
+</html>

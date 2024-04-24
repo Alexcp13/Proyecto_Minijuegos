@@ -1,0 +1,30 @@
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.ahorcado img {
+
+    width: 80%;
+    height: auto;
+}
+
+.col p {
+    margin: 20px;
+}
+
+.verificar {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: .5rem;
+    padding: 5px;
+
+}
+
+.verificar:hover {
+    background-color: rgb(82, 82, 241);
+}
