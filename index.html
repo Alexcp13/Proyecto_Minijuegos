@@ -10,22 +10,22 @@
 </head>
 
 <body>
+  <img src="./assets/flecha.png" alt="" id="volver" class="oculto backArrow">
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#section1">3 en Raya</a></li>
-      </ul>
-      <ul>
-        <li><a href="#section2">Ppt</a></li>
-      </ul>
-      <ul>
-        <li><a href="#section3">Ahorcado</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="menu" id="menu">
+    <div class="titulos">
+      <h1>Minijuegos</h1>
+      <h2>Seleccione el juego al que quiera jugar</h2>
+    </div>
+    <div class="menubottones">
+      <button class="menubutton1 " id="menuboton1"> 3 en Raya</button>
+      <button class="menubutton2 " id="menuboton2"> Piedra papel o tijera</button>
+      <button class="menubutton3 " id="menuboton3">Ahorcado</button>
+    </div>
 
-  <section id="section1">
+  </div>
+
+  <section id="section1" class="oculto">
     <div class="container">
       <h1>3 en Raya</h1>
       <div class="wins-container">
@@ -55,9 +55,11 @@
     </div>
 
 
+
   </section>
 
-  <section id="section2">
+  <section id="section2" class="oculto ">
+
 
     <div class="container2">
       <h1>¿Piedra, papel o tijera?</h1>
@@ -89,8 +91,11 @@
       <button class="btn disabled" id="restart">Restart </button>
     </div>
 
+
   </section>
-  <section id="section3">
+  <section id="section3" class="oculto ">
+
+
     <div class="container3">
       <h1>Ahorcado</h1>
 
@@ -106,9 +111,12 @@
         <p>Introduzca una letra:</p>
         <input type="text">
         <button class="verificar">Verificar letra</button>
+
       </div>
+      <button id="restartAhorcado" class="verificar">Restart</button>
 
     </div>
+
 
   </section>
 

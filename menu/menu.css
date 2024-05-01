@@ -1,0 +1,72 @@
+.titulos {
+    h1 {
+        font-size: 150px;
+    }
+
+    h2 {
+        margin-top: 100px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menubottones {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    button {
+        border: 0;
+        line-height: 1;
+        font-size: 1rem;
+        padding: .5rem;
+        border-radius: .5rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 600;
+
+    }
+}
+
+.menubutton1 {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menubutton1:hover {
+    background-image: url('tu_imagen.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.menubutton2 {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menubutton2:hover {
+    background-image: url('tu_imagen.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.menubutton3 {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menubutton3:hover {
+    background-image: url('tu_imagen.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.backArrow {
+    width: 10%;
+    cursor: pointer;
+}
