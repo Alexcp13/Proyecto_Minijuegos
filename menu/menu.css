@@ -70,3 +70,27 @@
     width: 10%;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1000px) {
+    .titulos {
+
+        text-align: center;
+
+        h1 {
+            font-size: 70px;
+            height: 80%;
+
+        }
+
+        h2 {
+            font-size: 20px;
+
+        }
+
+    }
+
+    .menubottones {
+        display: flex;
+        flex-direction: column;
+    }
+}
