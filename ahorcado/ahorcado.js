@@ -11,7 +11,7 @@ export const ahorcado = () => {
     let errorCounter
     const setGame = () => {
 
-        const words = ["españa", "martillo", "saltamontes", "toro", "patinete", "ordenador", "programacion", "tren", "libeluna"];
+        const words = ["españa", "martillo", "saltamontes", "toro", "patinete", "ordenador", "programacion", "tren", "libelula"];
         secretWord = words[Math.floor(Math.random() * words.length)];
 
         hiddenWord = secretWord.replace(/./g, "_ ");
@@ -32,11 +32,41 @@ export const ahorcado = () => {
     const errors = ["../assets/1.png", "../assets/2.png", "../assets/3.png", "../assets/4.png"]
     const maxErrors = errors.length;
 
+    const titulosAhorcado = document.querySelector(".titulosAhorcado");
 
+    const perderAhorcado = document.createElement("h1");
+    perderAhorcado.textContent = `Has perdido, la palabra era: ${secretWord}`;
+    perderAhorcado.classList.add("oculto");
+
+    titulosAhorcado.appendChild(perderAhorcado);
+
+
+
+    const ganarAhorcado = document.createElement("h1");
+
+    ganarAhorcado.textContent = "Has ganado";
+    ganarAhorcado.classList.add("oculto");
+
+    titulosAhorcado.appendChild(ganarAhorcado);
+
+    const tituloAhorcado = document.createElement("h1");
+
+    tituloAhorcado.textContent = "Ahorcado";
+
+
+    titulosAhorcado.appendChild(tituloAhorcado);
 
 
     const evaluateWord = () => {
-        const letter = document.querySelector('input').value;
+        const letter = document.querySelector('input').value.toLowerCase();
+        const inputField = document.querySelector('input');
+
+
+        if (!/[a-z]/.test(letter) || inputField.dataset.attempted === letter) {
+            inputField.value = "";
+            return;
+        }
+        inputField.dataset.attempted = letter;
 
         let error = true;
         for (let i = 0; i < secretWord.length; i++) {
@@ -66,14 +96,22 @@ export const ahorcado = () => {
         document.querySelector('input').value = ""
 
 
+
+
         if (!hiddenWord.includes("_")) {
-            alert("has ganado")
+            ganarAhorcado.classList.remove("oculto");
+            tituloAhorcado.classList.add("oculto");
         }
 
         if (errorCounter >= maxErrors) {
             setTimeout(() => {
-                alert(`¡Has perdido! La palabra era ${secretWord}.`)
-            }, 500);
+                document.querySelector('input').disabled = true;
+                perderAhorcado.classList.remove("oculto");
+                tituloAhorcado.classList.add("oculto");
+
+
+
+            });
 
         }
 
@@ -82,7 +120,10 @@ export const ahorcado = () => {
 
 
     const restartGame = () => {
-
+        document.querySelector('input').disabled = false;
+        ganarAhorcado.classList.add("oculto");
+        perderAhorcado.classList.add("oculto");
+        tituloAhorcado.classList.remove("oculto");
 
         setGame();
 
